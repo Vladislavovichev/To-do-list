@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(135deg, #153677, #4e085f);
+    height: 100vh;
+}
+.todo-app {
+    max-width: 540px;
+    background: #fff;
+    margin: 5vw auto 0px;
+    padding: 2%;
+    border-radius: 10px;
+    text-align: center;
+}
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4%;
+    font-size: 4.5vw;
+}
+.todo-app h2 img {
+    width: 6%;
+    margin-left: 1.5%;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 5%;
+    margin-bottom: 5%;
+}
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 2.6vw;
+}
+button {
+    border: none;
+    outline: none;
+    padding: 4% 11%;
+    background: rgb(255, 89, 69, 1);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 2.4vw;
+}
+button:hover {
+    background: rgb(255, 89, 69, 0.8);
+}
+ul li {
+    list-style-type: none;
+    font-size: 3.1vw;
+    padding: 3% 1.5% 2% 10%;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    width: 95%;
+    text-align: left;
+}
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 15%;
+    left: 2%;
+}
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+ul li span {
+    position: absolute;
+    right: -3.3vw;
+    top: 25%;
+    width: 5vw;
+    height: 5vw;
+    color: #555;
+    line-height: 130%;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 4vw;
+}
+ul li span:hover {
+    background: #edeef0;
+}
+#ClearAll {
+    margin: 0 auto;
+}
+@media (min-width:540px){
+    .todo-app h2{
+        font-size: 24px;
+    } 
+    button {
+        font-size: 13px;
+    }
+    input {
+        font-size: 14px;
+    }
+    ul li {
+        font-size: 17px;
+    }
+    ul li::before {
+        height: 28px;
+        width: 28px;
+        top: 8px;
+        left: 8px;
+    }
+    ul li span {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        right: -25px;
+        top: 5px;
+        line-height: 40px;
+    }
+}
